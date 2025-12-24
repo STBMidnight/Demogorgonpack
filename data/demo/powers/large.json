@@ -19,7 +19,7 @@
             },
             {
                 "type": "origins:execute_command",
-                "command": "attribute @s minecraft:generic.armor base set 4"
+                "command": "attribute @s minecraft:generic.armor base set 10"
             }
         ]
     },

@@ -3,7 +3,10 @@
 		"demo:wide",
 		"demo:large",
 		"demo:damage",
-		"demo:skin"
+		"demo:skin",
+		"demo:downbuffs",
+		"demo:fire",
+		"demo:carnivore"
 	],
 	"icon": {
 		"id": "minecraft:poppy"

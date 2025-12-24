@@ -1,0 +1,37 @@
+{
+    "type": "origins:multiple",
+    "name": "§lBorn in the§r §8§nDark",
+    "description": "While in the upside down, you gain night vision and even more buffs. This dimension is §lYOUR§r terrain.",
+    "born_in_dark_nightvision": {
+        "type": "origins:night_vision",
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:the_nether"
+        }
+    },
+    "born_in_dark_effects": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @s minecraft:strength 2 0 true"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @s minecraft:resistance 2 0 true"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "effect give @s minecraft:regeneration 2 0 true"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "minecraft:the_nether"
+        }
+    }
+}
