@@ -2,7 +2,8 @@
 	"powers": [
 		"demo:wide",
 		"demo:large",
-		"demo:damage"
+		"demo:damage",
+		"demo:skin"
 	],
 	"icon": {
 		"id": "minecraft:poppy"
