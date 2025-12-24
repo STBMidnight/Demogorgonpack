@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"demo:simple"
+	],
+	"icon": {
+		"id": "minecraft:poppy"
+	},
+	"order": 2,
+	"impact": 3,
+	"name": "Demogorgon",
+	"description": "The monster from the Upside Down."
+}
