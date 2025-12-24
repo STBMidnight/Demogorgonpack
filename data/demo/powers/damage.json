@@ -1,0 +1,22 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action":{
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:empty"
+            }
+        },
+        "if_action": {
+            "type": "origins:execute_command",
+            "command": "attribute @s minecraft:generic.attack_damage base set 4"
+        },
+        "else_action": {
+            "type": "origins:execute_command",
+            "command": "attribute @s minecraft:generic.attack_damage base set 1"
+        }
+    }
+}

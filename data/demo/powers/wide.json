@@ -1,0 +1,46 @@
+{
+    "type": "origins:action_on_hit",
+    "name": "§l§4Wide Mouth",
+    "description": "When you hit a mob that has 2 or less hearts you eat it.",
+    "bientity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:dust{color:[1, 0, 0], scale:4} ~ ~ ~ 0.25 1 0.25 1 50"
+                }
+            },
+            {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:entity.armadillo.hurt hostile @a ~ ~ ~ 2 0.5"
+                }
+            },
+            {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "tp @s ~ ~-500 ~"
+                }
+            },
+            {
+                "type": "origins:actor_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "effect give @s minecraft:saturation 10 10 true"
+                }
+            }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:health",
+                "comparison": "<=",
+                "compare_to": 2.0
+            }
+        }
+    }
