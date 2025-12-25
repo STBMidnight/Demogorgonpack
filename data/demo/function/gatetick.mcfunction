@@ -8,5 +8,5 @@ execute as @a store result score @s gateway_cooldown run resource get @s demo:ga
 
 # Remove just_teleported tag after a short delay
 execute as @a[tag=just_teleported] run scoreboard players add @s teleport_timer 1
-execute as @a[scores={teleport_timer=20..}] run tag @s remove just_teleported
-execute as @a[scores={teleport_timer=20..}] run scoreboard players set @s teleport_timer 0
+execute as @a[scores={teleport_timer=60..}] run tag @s remove just_teleported
+execute as @a[scores={teleport_timer=60..}] run scoreboard players set @s teleport_timer 0
