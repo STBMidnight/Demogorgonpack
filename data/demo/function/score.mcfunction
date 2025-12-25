@@ -1,0 +1,6 @@
+# ===== SCOREBOARD SETUP =====
+scoreboard objectives add gw_x dummy
+scoreboard objectives add gw_y dummy
+scoreboard objectives add gw_z dummy
+scoreboard objectives add gateway_cooldown dummy
+scoreboard objectives add teleport_timer dummy

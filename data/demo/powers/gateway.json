@@ -31,14 +31,18 @@
         }
     },
     
-    "create_gateway_overworld": {
+    "spawn_gateway": {
         "type": "origins:active_self",
         "entity_action": {
             "type": "origins:and",
             "actions": [
                 {
                     "type": "origins:execute_command",
-                    "command": "execute in demo:upside_down run tp @s ~ ~ ~"
+                    "command": "kill @e[type=marker,tag=gateway,distance=..100]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "summon minecraft:marker ~ ~ ~ {Tags:[\"gateway\"]}"
                 },
                 {
                     "type": "origins:change_resource",
@@ -51,7 +55,11 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "function demo:gateway"
+                    "command": "particle minecraft:portal ~ ~1 ~ 1 1 1 2 200 force"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:reverse_portal ~ ~1 ~ 1 1 1 1 100 force"
                 }
             ]
         },
@@ -63,10 +71,6 @@
                     "resource": "*:*_gateway_cooldown",
                     "comparison": "==",
                     "compare_to": 0
-                },
-                {
-                    "type": "origins:dimension",
-                    "dimension": "minecraft:overworld"
                 },
                 {
                     "type": "origins:on_block"
@@ -84,63 +88,6 @@
             "should_render": true,
             "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
             "bar_index": 6
-        },
-        "key": {
-            "key": "key.origins.primary_active"
-        }
-    },
-    
-    "create_gateway_upside_down": {
-        "type": "origins:active_self",
-        "entity_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:execute_command",
-                    "command": "execute in minecraft:overworld run tp @s ~ ~ ~"
-                },
-                {
-                    "type": "origins:change_resource",
-                    "resource": "*:*_gateway_cooldown",
-                    "change": 200
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "playsound minecraft:block.portal.trigger master @a ~ ~ ~ 2 0.5"
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "function demo:gateway"
-                }
-            ]
-        },
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:resource",
-                    "resource": "*:*_gateway_cooldown",
-                    "comparison": "==",
-                    "compare_to": 0
-                },
-                {
-                    "type": "origins:dimension",
-                    "dimension": "demo:upside_down"
-                },
-                {
-                    "type": "origins:on_block"
-                },
-                {
-                    "type": "origins:fluid_height",
-                    "fluid": "minecraft:water",
-                    "comparison": "==",
-                    "compare_to": 0.0
-                }
-            ]
-        },
-        "cooldown": 1,
-        "hud_render": {
-            "should_render": false
         },
         "key": {
             "key": "key.origins.primary_active"
