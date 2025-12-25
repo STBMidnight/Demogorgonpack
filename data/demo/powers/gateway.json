@@ -51,11 +51,7 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "particle minecraft:portal ~ ~1 ~ 1 1 1 2 200 force"
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "particle minecraft:reverse_portal ~ ~1 ~ 1 1 1 1 100 force"
+                    "command": "function demo:gateway"
                 }
             ]
         },
@@ -114,11 +110,7 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "particle minecraft:portal ~ ~1 ~ 1 1 1 2 200 force"
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "particle minecraft:reverse_portal ~ ~1 ~ 1 1 1 1 100 force"
+                    "command": "function demo:gateway"
                 }
             ]
         },
