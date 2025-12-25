@@ -1,0 +1,157 @@
+{
+    "type": "origins:multiple",
+    "name": "§5§lGate Maker",
+    "description": "Travel between the regular world and the Upside Down.",
+    
+    "gateway_cooldown": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 200,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 10
+        }
+    },
+    
+    "gateway_cooldown_tick": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_gateway_cooldown",
+            "change": -1
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_gateway_cooldown",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    
+    "create_gateway_overworld": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute in demo:upside_down run tp @s ~ ~ ~"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_gateway_cooldown",
+                    "change": 200
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:block.portal.trigger master @a ~ ~ ~ 2 0.5"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:portal ~ ~1 ~ 1 1 1 2 200 force"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:reverse_portal ~ ~1 ~ 1 1 1 1 100 force"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_gateway_cooldown",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:overworld"
+                },
+                {
+                    "type": "origins:on_block"
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": "==",
+                    "compare_to": 0.0
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 6
+        },
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    },
+    
+    "create_gateway_upside_down": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "execute in minecraft:overworld run tp @s ~ ~ ~"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_gateway_cooldown",
+                    "change": 200
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:block.portal.trigger master @a ~ ~ ~ 2 0.5"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:portal ~ ~1 ~ 1 1 1 2 200 force"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:reverse_portal ~ ~1 ~ 1 1 1 1 100 force"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_gateway_cooldown",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:dimension",
+                    "dimension": "demo:upside_down"
+                },
+                {
+                    "type": "origins:on_block"
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": "==",
+                    "compare_to": 0.0
+                }
+            ]
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    }
+}

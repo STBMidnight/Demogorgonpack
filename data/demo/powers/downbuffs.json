@@ -6,7 +6,7 @@
         "type": "origins:night_vision",
         "condition": {
             "type": "origins:dimension",
-            "dimension": "minecraft:the_nether"
+            "dimension": "demo:upside_down"
         }
     },
     "born_in_dark_effects": {
@@ -31,7 +31,7 @@
         },
         "condition": {
             "type": "origins:dimension",
-            "dimension": "minecraft:the_nether"
+            "dimension": "demo:upside_down"
         }
     }
 }
