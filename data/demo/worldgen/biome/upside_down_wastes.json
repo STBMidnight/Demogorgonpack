@@ -1,0 +1,69 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.0,
+  "effects": {
+    "grass_color": 4539717,
+    "fog_color": 2105376,
+    "ambient_sound": "minecraft:ambient.nether_wastes.loop",
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 100
+    },
+    "particle": {
+      "probability": 0.05,
+      "options": {
+        "type": "minecraft:ash"
+      }
+    },
+    "sky_color": 0,
+    "water_color": 4210752,
+    "water_fog_color": 0
+  },
+  "features": [
+    [],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_gold",
+      "minecraft:ore_diamond",
+      "minecraft:ore_copper"
+    ],
+    [],
+    [],
+    [
+      "minecraft:patch_dead_bush_2"
+    ],
+    []
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 2.0
+}

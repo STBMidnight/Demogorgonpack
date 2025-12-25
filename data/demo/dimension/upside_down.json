@@ -1,0 +1,11 @@
+{
+  "type": "demo:upside_down",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "demo:upside_down_wastes"
+    },
+    "settings": "minecraft:upside_down"
+  }
+}
