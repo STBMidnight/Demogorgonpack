@@ -1,26 +1,19 @@
-# ===== teleport_to_upside_down.mcfunction =====
-# Add a tag to prevent immediate re-entry
+# Prevent immediate re-entry
 tag @s add just_teleported
+tag @s add finishing_upside_down
 
-# Reset ability cooldown
+# Reset cooldown
 resource set @s demo:gateway_gateway_cooldown 200
 
-kill @e[type=marker,tag=gateway,distance=..50]
-summon minecraft:marker ~ ~ ~ {Tags:["gateway","linked"]}
+# --- OVERWORLD SIDE ---
+execute in minecraft:overworld run kill @e[type=marker,tag=overworld,distance=..50]
+execute in minecraft:overworld run summon minecraft:marker ~ ~ ~ {Tags:["gateway","overworld"]}
 
-# Store coordinates
-execute store result score @s gw_x run data get entity @s Pos[0]
-execute store result score @s gw_y run data get entity @s Pos[1]
-execute store result score @s gw_z run data get entity @s Pos[2]
-
-# Teleport player
+# --- TELEPORT ---
 execute in demo:upside_down run tp @s ~ ~ ~
 
-# Kill old gateway in upside down at these coords
-kill @e[type=marker,tag=gateway,distance=..50]
-
-# Create linked gateway at arrival point
-execute in demo:upside_down positioned as @s run summon minecraft:marker ~ ~ ~ {Tags:["gateway","linked"]}
+# --- UPSIDE DOWN SIDE ---
+schedule function demo:upside_down_gate 5t
 
 # Effects
 playsound minecraft:block.portal.travel master @s ~ ~ ~ 2 0.5
