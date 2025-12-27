@@ -38,7 +38,7 @@
             "actions": [
                 {
                     "type": "origins:execute_command",
-                    "command": "kill @e[type=marker,tag=gateway,distance=..100]"
+                    "command": "kill @e[type=marker,tag=gateway,distance=..10]"
                 },
                 {
                     "type": "origins:execute_command",

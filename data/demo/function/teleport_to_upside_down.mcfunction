@@ -5,6 +5,9 @@ tag @s add just_teleported
 # Reset ability cooldown
 resource set @s demo:gateway_gateway_cooldown 200
 
+kill @e[type=marker,tag=gateway,distance=..50]
+summon minecraft:marker ~ ~ ~ {Tags:["gateway","linked"]}
+
 # Store coordinates
 execute store result score @s gw_x run data get entity @s Pos[0]
 execute store result score @s gw_y run data get entity @s Pos[1]
@@ -14,7 +17,7 @@ execute store result score @s gw_z run data get entity @s Pos[2]
 execute in demo:upside_down run tp @s ~ ~ ~
 
 # Kill old gateway in upside down at these coords
-execute in demo:upside_down positioned as @s run kill @e[type=marker,tag=gateway]
+kill @e[type=marker,tag=gateway,distance=..50]
 
 # Create linked gateway at arrival point
 execute in demo:upside_down positioned as @s run summon minecraft:marker ~ ~ ~ {Tags:["gateway","linked"]}
