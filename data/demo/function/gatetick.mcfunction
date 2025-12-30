@@ -1,6 +1,8 @@
 # ===== gatetick.mcfunction =====
+
 execute as @e[tag=gateway] at @s run function demo:gateway
 function demo:thunder
+function demo:update_dimension_tags
 execute as @e[tag=gateway] at @s run function demo:gateway_teleport
 
 # Sync Origins resource to scoreboard for easier checking
@@ -18,4 +20,3 @@ scoreboard players remove @e[type=marker,tag=gateway] gateway_life 1
 execute as @e[type=marker,tag=gateway,scores={gateway_life=1..100}] at @s run particle minecraft:crimson_spore ~ ~1 ~ 0.3 0.6 0.3 0.02 6 force
 execute as @e[type=marker,tag=gateway,scores={gateway_life=1}] at @s run playsound minecraft:entity.allay.death master @a[distance=..10] ~ ~ ~ 1 0.7
 kill @e[type=marker,tag=gateway,scores={gateway_life=..0}]
-

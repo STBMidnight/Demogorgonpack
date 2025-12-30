@@ -1,6 +1,7 @@
 {
 	"powers": [
 		"demo:large",
+		"demo:climb",
 		"demo:damage",
 		"demo:carnivore",
 		"demo:skin",

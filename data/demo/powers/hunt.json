@@ -20,9 +20,21 @@
         },
         {
           "type": "origins:execute_command",
+          "command": "execute if dimension demo:upside_down run function demo:forceload_overworld_chunks"
+        },
+        {
+          "type": "origins:execute_command",
           "command": "function demo:track_players"
         }
       ]
+    }
+  },
+  "remove_forceload": {
+    "type": "origins:action_over_time",
+    "interval": 600,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "execute unless dimension demo:upside_down run forceload remove all"
     }
   },
   "glow": {

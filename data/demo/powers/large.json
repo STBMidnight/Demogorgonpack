@@ -20,6 +20,10 @@
             {
                 "type": "origins:execute_command",
                 "command": "attribute @s minecraft:generic.armor base set 10"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "attribute @s minecraft:generic.safe_fall_distance base set 10"
             }
         ]
     },
@@ -41,6 +45,10 @@
             {
                 "type": "origins:execute_command",
                 "command": "attribute @s minecraft:generic.armor base set 10"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "attribute @s minecraft:generic.safe_fall_distance base set 10"
             }
         ]
     },
@@ -66,6 +74,10 @@
             {
                 "type": "origins:execute_command",
                 "command": "attribute @s minecraft:generic.armor base set 0"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "attribute @s minecraft:generic.safe_fall_distance base set 3"
             }
         ]
     },

@@ -1,7 +1,6 @@
 {
     "type": "origins:action_over_time",
-    "hidden": true,
-    "name": "§4§lSavage Claws",
+    "name": "§9§lSavage Claws",
     "description": "Your bare claws are deadly weapons, dealing 4 hearts of damage. Holding tools reduces your natural attack power to normal levels.",
     "interval": 1,
     "entity_action":{
@@ -15,7 +14,7 @@
         },
         "if_action": {
             "type": "origins:execute_command",
-            "command": "attribute @s minecraft:generic.attack_damage base set 4"
+            "command": "attribute @s minecraft:generic.attack_damage base set 6"
         },
         "else_action": {
             "type": "origins:execute_command",

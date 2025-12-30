@@ -1,0 +1,24 @@
+{   
+    "type": "origins:multiple",
+    "name": "§a§lWall Crawler",
+    "description": "You possess the uncanny ability to scale vertical surfaces with ease.",
+    "climbing": {
+        "type": "origins:climbing",
+        "allow_holding": false,
+        "condition": {
+        "type": "origins:collided_horizontally"
+        }
+    },
+    "speed":{
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:add_velocity",
+            "y": 0.3,
+                    "space": "local"
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:climbing"
+        }
+    }
+}
