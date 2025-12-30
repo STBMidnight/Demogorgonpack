@@ -1,7 +1,6 @@
 # Run for players that just teleported
 execute as @a[tag=finishing_upside_down] at @s in demo:upside_down run kill @e[type=marker,tag=upside_down,distance=..50]
 
-execute as @a[tag=finishing_upside_down] at @s in demo:upside_down run summon minecraft:marker ~ ~ ~ {Tags:["gateway","upside_down"]}
-
-# Cleanup
-tag @a[tag=finishing_upside_down] remove finishing_upside_down
+execute as @a[tag=finishing_upside_down] at @s in demo:upside_down run summon minecraft:marker ~ ~ ~ {Tags:["gateway","upside_down", "new_gateway"]}
+scoreboard players set @e[type=marker,tag=new_gateway] gateway_life 3600
+tag @e[type=marker,tag=new_gateway] remove new_gateway

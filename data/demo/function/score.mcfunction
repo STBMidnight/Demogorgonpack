@@ -4,3 +4,4 @@ scoreboard objectives add gw_y dummy
 scoreboard objectives add gw_z dummy
 scoreboard objectives add gateway_cooldown dummy
 scoreboard objectives add teleport_timer dummy
+scoreboard objectives add gateway_life dummy

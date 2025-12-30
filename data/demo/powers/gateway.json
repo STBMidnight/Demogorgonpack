@@ -47,15 +47,15 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "playsound minecraft:block.portal.trigger master @a ~ ~ ~ 2 0.5"
+                    "command": "playsound minecraft:entity.allay.hurt player @s ~ ~ ~ 1.0 0.3"
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "particle minecraft:portal ~ ~1 ~ 1 1 1 2 200 force"
+                    "command": "particle minecraft:falling_lava ~ ~1 ~ 1 1 1 2 200 force"
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "particle minecraft:reverse_portal ~ ~1 ~ 1 1 1 1 100 force"
+                    "command": "particle minecraft:dust{color:[1.0,0.55,0.2],scale:0.7} ~ ~1 ~ 1 1 1 1 100 force"
                 }
             ]
         },
@@ -109,15 +109,15 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "playsound minecraft:block.portal.trigger master @a ~ ~ ~ 2 0.5"
+                    "command": "playsound minecraft:entity.allay.hurt player @s ~ ~ ~ 1.0 0.3"
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "particle minecraft:portal ~ ~1 ~ 1 1 1 2 200 force"
+                    "command": "particle minecraft:falling_lava ~ ~1 ~ 1 1 1 2 200 force"
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "particle minecraft:reverse_portal ~ ~1 ~ 1 1 1 1 100 force"
+                    "command": "particle minecraft:dust{color:[1.0,0.55,0.2],scale:0.7} ~ ~1 ~ 1 1 1 1 100 force"
                 }
             ]
         },

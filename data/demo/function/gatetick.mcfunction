@@ -10,3 +10,12 @@ execute as @a store result score @s gateway_cooldown run resource get @s demo:ga
 execute as @a[tag=just_teleported] run scoreboard players add @s teleport_timer 1
 execute as @a[scores={teleport_timer=60..}] run tag @s remove just_teleported
 execute as @a[scores={teleport_timer=60..}] run scoreboard players set @s teleport_timer 0
+
+# Decrease lifetime of all gateways
+scoreboard players remove @e[type=marker,tag=gateway] gateway_life 1
+
+# Remove expired gateways
+execute as @e[type=marker,tag=gateway,scores={gateway_life=1..100}] at @s run particle minecraft:crimson_spore ~ ~1 ~ 0.3 0.6 0.3 0.02 6 force
+execute as @e[type=marker,tag=gateway,scores={gateway_life=1}] at @s run playsound minecraft:entity.allay.death master @a[distance=..10] ~ ~ ~ 1 0.7
+kill @e[type=marker,tag=gateway,scores={gateway_life=..0}]
+
