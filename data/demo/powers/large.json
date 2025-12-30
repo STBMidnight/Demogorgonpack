@@ -23,6 +23,27 @@
             }
         ]
     },
+    "entity_action_respawned": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "scale set pehkui:height 1.25 @s"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "attribute @s minecraft:generic.movement_speed base set 0.2"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "attribute @s minecraft:generic.jump_strength base set 0.75"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "attribute @s minecraft:generic.armor base set 10"
+            }
+        ]
+    },
     "entity_action_lost": {
         "type": "origins:and",
         "actions": [

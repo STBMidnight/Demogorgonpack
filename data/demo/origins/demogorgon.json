@@ -8,7 +8,8 @@
 		"demo:fire",
 		"demo:carnivore",
 		"demo:gateway",
-		"demo:hunt"
+		"demo:hunt",
+		"demo:hunt1"
 	],
 	"icon": {
 		"id": "minecraft:poppy"
