@@ -1,15 +1,16 @@
 {
 	"powers": [
-		"demo:wide",
 		"demo:large",
 		"demo:damage",
-		"demo:skin",
-		"demo:downbuffs",
-		"demo:fire",
 		"demo:carnivore",
-		"demo:gateway",
+		"demo:skin",
+		"demo:fire",
+		"demo:wide",
+		"demo:spawn",
+		"demo:downbuffs",
 		"demo:hunt",
-		"demo:hunt1"
+		"demo:no_bed",
+		"demo:gateway"
 	],
 	"icon": {
 		"id": "minecraft:poppy"
@@ -17,5 +18,5 @@
 	"order": 2,
 	"impact": 3,
 	"name": "§8§lDemogorgon",
-	"description": "The monster from the Upside Down."
+	"description": "A terrifying apex predator from the Upside Down. You are a hulking monster that tears between dimensions, hunting prey across worlds with savage efficiency."
 }

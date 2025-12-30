@@ -1,7 +1,7 @@
 {
     "type": "origins:multiple",
-    "name": "§l§4Carnivorous",
-    "description": "You can only eat meat, living or dead... all looks the same to you.",
+    "name": "§l§cObligate Carnivore",
+    "description": "Your monstrous biology only processes raw flesh. You can only consume meat - beef, pork, chicken, mutton, rabbit, fish, and even rotten flesh sustain you. All plant matter is inedible.",
     "restrict_food": {
         "type": "origins:prevent_item_use",
         "item_condition": {

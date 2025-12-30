@@ -1,7 +1,7 @@
 {
     "type": "origins:action_on_callback",
-    "name": "§4Large",
-    "description": "You are larger than normal, granting you increased height, movement speed, and jump height.",
+    "name": "§4§lApex Predator",
+    "description": "Your monstrous size grants you immense physical power. You are 25% larger, move with frightening speed (Speed IV), leap higher, and possess natural armor plating.",
     "entity_action_gained": {
         "type": "origins:and",
         "actions": [
@@ -11,7 +11,7 @@
             },
             {
                 "type": "origins:execute_command",
-                "command": "attribute @s minecraft:generic.movement_speed base set 0.2"
+                "command": "effect give @s minecraft:speed infinite 3 true"
             },
             {
                 "type": "origins:execute_command",
@@ -32,7 +32,7 @@
             },
             {
                 "type": "origins:execute_command",
-                "command": "attribute @s minecraft:generic.movement_speed base set 0.2"
+                "command": "effect give @s minecraft:speed infinite 3 true"
             },
             {
                 "type": "origins:execute_command",
@@ -53,7 +53,7 @@
             },
             {
                 "type": "origins:execute_command",
-                "command": "attribute @s minecraft:generic.movement_speed base set 0.1"
+                "command": "effect clear @s minecraft:speed"
             },
             {
                 "type": "origins:execute_command",

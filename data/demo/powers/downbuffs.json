@@ -1,7 +1,7 @@
 {
     "type": "origins:multiple",
-    "name": "§lBorn in the§r §8§nDark",
-    "description": "While in the upside down, you gain night vision and even more buffs. This dimension is §lYOUR§r terrain.",
+    "name": "§l§8Master of §nThe Upside Down",
+    "description": "This twisted dimension is your home territory. While in the Upside Down, you gain Night Vision to see through the eternal darkness, along with Strength, Resistance, and Regeneration. Here, you are truly unstoppable.",
     "born_in_dark_nightvision": {
         "type": "origins:night_vision",
         "condition": {

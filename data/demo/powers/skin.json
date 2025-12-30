@@ -1,6 +1,5 @@
 {
     "type": "origins:simple",
-    "name": "§4Resilient Skin",
-    "description": "Being born in the harsh enviroment, your body has adapted to almost all forms of damage"
-
+    "name": "§f§lLeathery Hide",
+    "description": "Your tough, alien skin provides natural resistance to most forms of damage, making you harder to kill than ordinary creatures."
 }

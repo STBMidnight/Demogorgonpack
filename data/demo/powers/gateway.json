@@ -1,7 +1,7 @@
 {
     "type": "origins:multiple",
-    "name": "§5§lGate Maker",
-    "description": "Travel between the regular world and the Upside Down.",
+    "name": "§5§lDimensional gates",
+    "description": "Your connection to the Upside Down allows you to tear open temporary gateways between dimensions. Press your primary key while standing on solid ground to create a gate. These §lrifts§r last for 3 minutes (3600 ticks) before collapsing, with crimson particles appearing in the final moments as a warning. §lWalk into any gateway§r to be pulled through, teleporting to the same coordinates in the opposite dimension. §lUpon arrival§r, a paired gateway automatically spawns at your destination, creating a two-way link. Your ability kills any existing gateways within 50 blocks before creating a new one, ensuring you maintain control over your rifts. §lAfter teleporting§r, you cannot use gateways again for 3 seconds (60 ticks) to prevent accidental returns, and your ability enters a 10-second cooldown. You can also not enter the gates while the ability is on cooldown. Note: Creating a new gateway destroys ALL your previous portals in both dimensions within 50 blocks, so plan your rift network carefully.",
     
     "gateway_cooldown": {
         "type": "origins:resource",

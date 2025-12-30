@@ -1,0 +1,7 @@
+{
+    "name": "§9§lBorn in Darkness",
+    "description": "You begin your existence in the Upside Down, spawning in that twisted mirror dimension rather than the ordinary world.",
+  "type": "origins:modify_player_spawn",
+  "dimension": "demo:upside_down",
+  "spawn_strategy": "default"
+}

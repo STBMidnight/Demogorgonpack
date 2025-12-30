@@ -1,0 +1,9 @@
+{
+    "name": "§0§lSleepless Nightmare",
+    "description": "Monsters like you do not sleep. You cannot use beds to set spawn points or rest through the night - you are eternally awake, eternally hunting.",
+    "type": "origins:prevent_block_use",
+    "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "minecraft:beds"
+    }
+}

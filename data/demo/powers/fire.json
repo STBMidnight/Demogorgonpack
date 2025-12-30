@@ -1,7 +1,7 @@
 {
     "type": "origins:action_when_damage_taken",
-    "name": "§4Weak to Fire",
-    "description": "Truly a double sided sword. You take less damage from other forms of attacks but crumble when facing fire.",
+    "name": "§6§lCritical Weakness: Fire",
+    "description": "Despite your resilience, fire is your Achilles heel. Any fire damage causes catastrophic harm, dealing an additional 10 hearts of damage. Avoid flames at all costs.",
     "entity_action": {
         "type": "origins:and",
         "actions": [
