@@ -6,7 +6,16 @@
         "type": "origins:climbing",
         "allow_holding": false,
         "condition": {
-            "type": "origins:collided_horizontally"
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:collided_horizontally"
+                },
+                {
+                    "type": "origins:sneaking",
+                    "inverted": true
+                }
+            ]
         }
     }
 }

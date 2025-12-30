@@ -1,7 +1,7 @@
 {
   "type": "origins:multiple",
   "name": "§6§lInterdimensional Hunter",
-  "description": "While lurking in the Upside Down, you can sense players in the Overworld above. Glowing markers appear at their locations, allowing you to track your prey across dimensions before tearing through to claim them.",
+  "description": "While lurking in the Upside Down, you can sense players (and villagers) in the Overworld above. Glowing markers appear at their locations, allowing you to track your prey across dimensions before tearing through to claim them.",
   "hunt_function": {
     "type": "origins:action_over_time",
     "interval": 20,
