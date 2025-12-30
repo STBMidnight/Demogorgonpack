@@ -4,4 +4,4 @@ execute as @a[tag=finishing_overworld] at @s in minecraft:overworld run kill @e[
 execute as @a[tag=finishing_overworld] at @s in minecraft:overworld run summon minecraft:marker ~ ~ ~ {Tags:["gateway","overworld"]}
 
 # Cleanup
-tag @a[tag=overworld] remove finishing_overworld
+tag @a[tag=finishing_overworld] remove finishing_overworld

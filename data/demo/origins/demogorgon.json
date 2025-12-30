@@ -7,7 +7,8 @@
 		"demo:downbuffs",
 		"demo:fire",
 		"demo:carnivore",
-		"demo:gateway"
+		"demo:gateway",
+		"demo:hunt"
 	],
 	"icon": {
 		"id": "minecraft:poppy"
