@@ -17,14 +17,14 @@ resource set @s demo:gateway_gateway_cooldown 200
 # --- OVERWORLD SIDE ---
 execute in minecraft:overworld run kill @e[type=marker,tag=overworld,distance=..50]
 execute in minecraft:overworld run summon minecraft:marker ~ ~ ~ {Tags:["gateway","overworld", "new_gateway"]}
-scoreboard players set @e[type=marker,tag=new_gateway] gateway_life 3600
+scoreboard players set @e[type=marker,tag=new_gateway] gateway_life 600
 tag @e[type=marker,tag=new_gateway] remove new_gateway
 # --- TELEPORT ---
 execute in demo:upside_down run tp @s ~ ~ ~
 
 # --- UPSIDE DOWN SIDE ---
-schedule function demo:upside_down_gate 5t
+schedule function demo:upside_down_gate 10t
 
-schedule function demo:gate_exit_particles 10t
+schedule function demo:gate_exit_particles 15t
 
 playsound minecraft:block.honey_block.break player @s ~ ~ ~ 10 0.1

@@ -1,0 +1,23 @@
+{
+    "type": "origins:multiple",
+    "hidden": true,
+    "resource":{
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "start_value": 100,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 17
+        }
+    },
+    "regen": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "demo:soul_resource",
+            "change": 1
+        }
+    }
+}

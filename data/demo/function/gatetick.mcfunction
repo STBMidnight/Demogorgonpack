@@ -9,9 +9,9 @@ execute as @e[tag=gateway] at @s run function demo:gateway_teleport
 execute as @a store result score @s gateway_cooldown run resource get @s demo:gateway_gateway_cooldown
 
 # Remove just_teleported tag after a short delay
-execute as @a[tag=just_teleported] run scoreboard players add @s teleport_timer 1
-execute as @a[scores={teleport_timer=60..}] run tag @s remove just_teleported
-execute as @a[scores={teleport_timer=60..}] run scoreboard players set @s teleport_timer 0
+execute as @e[tag=just_teleported] run scoreboard players add @s teleport_timer 1
+execute as @e[scores={teleport_timer=60..}] run tag @s remove just_teleported
+execute as @e[scores={teleport_timer=60..}] run scoreboard players set @s teleport_timer 0
 
 # Decrease lifetime of all gateways
 scoreboard players remove @e[type=marker,tag=gateway] gateway_life 1

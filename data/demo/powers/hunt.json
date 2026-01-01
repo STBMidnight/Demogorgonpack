@@ -29,6 +29,25 @@
       ]
     }
   },
+  "Forceload_upside_down": {
+      "type": "origins:action_over_time",
+    "interval": 20,
+
+    "condition": {
+      "type": "origins:dimension",
+      "dimension": "minecraft:overworld"
+    },
+
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "function demo:forceload_upside_down_chunks"
+        }
+      ]
+    }
+  },
   "remove_forceload": {
     "type": "origins:action_over_time",
     "interval": 600,

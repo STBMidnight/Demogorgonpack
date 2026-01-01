@@ -18,7 +18,7 @@ resource set @s demo:gateway_gateway_cooldown 200
 # --- UPSIDE DOWN SIDE ---
 execute in demo:upside_down run kill @e[type=marker,tag=upside_down,distance=..50]
 execute in demo:upside_down run summon minecraft:marker ~ ~ ~ {Tags:["gateway","upside_down", "new_gateway"]}
-scoreboard players set @e[type=minecraft:marker, tag=new_gateway] gateway_life 3600
+scoreboard players set @e[type=minecraft:marker, tag=new_gateway] gateway_life 600
 tag @e[type=marker,tag=new_gateway] remove new_gateway
 
 # --- TELEPORT ---

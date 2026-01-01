@@ -11,6 +11,8 @@
 		"demo:downbuffs",
 		"demo:hunt",
 		"demo:no_bed",
+		"demo:banish",
+		"demo:soul",
 		"demo:gateway"
 	],
 	"icon": {
